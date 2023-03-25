@@ -24,7 +24,7 @@ export default function Home() {
 					fill
 				/>
 			</div>
-			<h1 className="text-white text-5xl">Mariachon</h1>
+			<h1 className="text-white text-5xl font-comforta font-bold mt-4">Mariachon</h1>
 			<p className="w-8/12 text-white mt-24 px-10">
 				Somos una compañía que une la creatividad del entretenimiento, la
 				efectividad del marketing, y la magia de la tecnología para crear
