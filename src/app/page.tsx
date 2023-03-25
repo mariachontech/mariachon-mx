@@ -11,10 +11,11 @@ export default function Home() {
 			<Head>
 				<title>Mariachon</title>
 				<link rel="icon" href="/images/mariachon.png" type="image/svg+xml" />
+				<meta property="og:image" content={"/images/mariachon.png"} />
 			</Head>
-			 <div className="absolute top-0 ">
+			<div className="absolute top-0 ">
 				<NavBar />
-			</div> 
+			</div>
 			<div className="relative w-[350px] h-[150px]">
 				<Image
 					className="object-cover"
