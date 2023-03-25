@@ -10,7 +10,7 @@ const NavBar = (props: Props) => {
 					<Image
 						className="object-cover"
 						src={"/images/menu.png"}
-						alt="Mariachon Company"
+						alt="Mariachon Company."
 						fill
 					/>
 			</div>
