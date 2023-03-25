@@ -1,14 +1,11 @@
-import { VideoSchema } from "@../typings"
-import React, { useEffect, useRef } from "react"
 
 type Props = {
 	visible: boolean
 	setVisible: any // SetStateAction<boolean>
-	video: VideoSchema[] | any
 }
 
 const MenuModal = (props: Props) => {
-	const { visible, setVisible, video } = props
+	const { visible, setVisible } = props
 
 	const handleStop = (e: any) => {
 		if (e.target.id === "container") {
