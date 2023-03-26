@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 
 import { useTypewriter, Cursor } from "react-simple-typewriter"
@@ -8,11 +8,13 @@ import { motion } from "framer-motion"
 
 
 import NavBar from '../NavBar'
+import MenuModal from '../MenuModal'
 
 
 type Props = {}
 
 const Hero = (props: Props) => {
+  const [visible, setVisible] = useState(false)
     const [text, count] = useTypewriter({
 			words: ["MARIACHON", "<Entretenimiento />", "<Marketing />", "<Tecnología />"],
 		   loop: true,
@@ -34,7 +36,8 @@ const Hero = (props: Props) => {
 				transition={{
 					duration: 1.5,
 				}}
-				className="absolute top-0 "
+				className="absolute top-0 cursor-pointer"
+				onClick={() => setVisible(true)}
 			>
 				<NavBar />
 			</motion.div>
@@ -72,6 +75,7 @@ const Hero = (props: Props) => {
 					experiencias innovadoras para tu empresa.
 				</p>
 			</motion.div>
+			<MenuModal visible={visible} setVisible={setVisible} />
 		</div>
 	)
 }
