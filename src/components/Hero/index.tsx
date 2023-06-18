@@ -1,27 +1,30 @@
-'use client'
+"use client"
 
-import React, { useState } from 'react'
-import Image from 'next/image'
+import React, { useState } from "react"
+import Image from "next/image"
 
 import { useTypewriter, Cursor } from "react-simple-typewriter"
 import { motion } from "framer-motion"
 
-
-import NavBar from '../NavBar'
-import MenuModal from '../MenuModal'
-
+import NavBar from "../NavBar"
+import MenuModal from "../MenuModal"
 
 type Props = {}
 
 const Hero = (props: Props) => {
-  const [visible, setVisible] = useState(false)
-    const [text, count] = useTypewriter({
-			words: ["MARIACHON", "<Entretenimiento />", "<Marketing />", "<Tecnología />"],
-		   loop: true,
-       delaySpeed: 2000
-		})
-  return (
-		<div className="flex flex-col justify-center items-center">
+	const [visible, setVisible] = useState(false)
+	const [text, count] = useTypewriter({
+		words: [
+			"MARIACHON",
+			"<Entretenimiento />",
+			"<Marketing />",
+			"<Tecnología />",
+		],
+		loop: true,
+		delaySpeed: 2000,
+	})
+	return (
+		<div className="flex flex-col justify-center items-center h-screen">
 			<motion.div
 				initial={{
 					x: -500,
@@ -53,6 +56,20 @@ const Hero = (props: Props) => {
 				<span>{text}</span>
 				<Cursor cursorColor="#F7AB0A" />
 			</h1>
+			<div className="pt-5">
+				<a href="/#entretenimiento">
+					<button className="heroButton">Entretenimiento</button>
+				</a>
+				<a href="/#mariachis">
+					<button className="heroButton">Mariachis</button>
+				</a>
+				<a href="/#marketing">
+					<button className="heroButton">Marketing</button>
+				</a>
+				<a href="/#diseño-web">
+					<button className="heroButton">Diseño web</button>
+				</a>
+			</div>
 			<motion.div
 				initial={{
 					x: 500,
