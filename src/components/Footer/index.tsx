@@ -20,7 +20,7 @@ const socials = [
 
 const Footer = (props: Props) => {
 	return (
-		<footer className="w-full h-fit my-4">
+		<footer className="w-full h-fit my-4 bg-white">
 			<div className="container mx-auto flex flex-col justify-end md:flex-row md:justify-between items-center">
 				<div className="hidden  md:flex md:flex-col">
 					<h3 className="text-[#9A9A9A] text-2xl font-extrabold 	 ">
